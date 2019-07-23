@@ -16,4 +16,5 @@ const getPods = async function () {
     $('.pods').on('click', '.img', function(){
         let podID = $(this).data('id')
         console.log(podID)
+        
     })
