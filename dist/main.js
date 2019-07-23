@@ -6,15 +6,18 @@ const podManager = new PodManager()
 //     renderer.render(tempmanager.cityData)
 // }
 
+
+
 const getPods = async function () {
     let query = $(".podInput").val()
+    $(".podInput").val('')
     await podManager.getPodData(query)
     renderer.render(podManager.podData)
-    console.log(podManager.podData)
+    // console.log(podManager.podData)
     }
 
     $('.pods').on('click', '.img', function(){
         let podID = $(this).data('id')
         console.log(podID)
-        
+        renderer.render2(podManager.getEpisodesData(podID))
     })

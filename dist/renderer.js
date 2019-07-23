@@ -8,7 +8,9 @@ class Renderer {
     // }
 
     render(podData) {
+        $('.episodes').empty()
         $('.main').empty()
+        $('.pods').empty()
         const source = $('#pod-template').html()
         const template = Handlebars.compile(source)
         const someHTML = template({data:podData})
@@ -16,13 +18,13 @@ class Renderer {
 
     }
 
-    render(episodeData){
+    render2(episodeData){
         $('.pods').empty()
+        $('.episodes').empty()
         const source = $('#episodes-template').html()
         const template = Handlebars.compile(source)
         const someHTML = template({data:episodeData})
         $('.episodes').append(someHTML)
-
     }
 
 }

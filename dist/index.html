@@ -57,7 +57,7 @@
     <script id="pod-template" type="text/x-handlebars-template">
         {{#each data}}
          <div class="podData">
-            <div class="Title"> {{title_original}}</div>
+            <div class="title"> {{title_original}}</div>
             <div class="thumbnail"><img class="img" src="{{image}}" data-id="{{id}}"></div>
             <!-- <div class="description">{{description_original}}</div> -->
          </div>
@@ -67,10 +67,14 @@
 
     <div class="episodes"></div>
     <!-- handlebars episodes -->
-    <script id="pod-template" type="text/x-handlebars-template">
-        {{each data}}
-        <div class="podData">
-            
+    <script id="episodes-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="epData">
+            <div class="episode-title">{{title}}</div>
+            <img src="{{image}}" alt="">
+            <audio controls>
+                <source src="{{audio}}" type="audio/mpeg">
+            </audio>
         </div>
         {{/each}}
     </script>
