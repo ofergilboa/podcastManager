@@ -9,7 +9,8 @@ async getDataFromDB(){
 }
 
 async getPodData(podName){
-    let data = await $.get(`/search/podcast/:${podName}`)
+    let data = await $.get(`/search/podcast/${podName}`)
     this.podData.push(data)
     }
 }
+
