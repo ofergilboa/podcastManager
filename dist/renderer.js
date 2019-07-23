@@ -8,7 +8,7 @@ class Renderer {
     }
 
     render(podData) {
-        $('.pods').empty()
+        $('.main').empty()
         const source = $('#pod-template').html()
         const template = Handlebars.compile(source)
         const someHTML = template(podData)
