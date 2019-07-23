@@ -23,6 +23,8 @@
     "jquery": "^3.4.1",
     "less": "^3.9.0",
     "materialize": "^1.0.0",
-    "request": "^2.88.0"
+    "mongoose": "^5.6.6",
+    "request": "^2.88.0",
+    "unirest": "^0.6.0"
   }
 }
