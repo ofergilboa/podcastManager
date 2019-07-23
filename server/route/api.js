@@ -18,12 +18,12 @@ const genres = gnrs.genres
 //     res.send(response.body.results)
 // })
 
-router.get('/search/episode/:query',async function(req,res){
-    let query = req.params.query
-    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/podcasts/f84d1cd078574cbfacbdf3d73a51e2c8`)
+router.get('/search/episode/:episodeid',async function(req,res){
+    let episodeId = req.params.episodeid
+    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/podcasts/${episodeId}`)
     .header('X-ListenAPI-Key', `${apiKey}`)
     response.toJSON();
-    res.send(response)
+    res.send(response.body.episodes)
 })
 
 
