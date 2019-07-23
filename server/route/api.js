@@ -10,13 +10,22 @@ const genres = gnrs.genres
 
 //**********************************************************
 
-router.get('/search/episode/:query',async function(req,res){
-    let query = req.params.query
-    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/search?q=${query}&sort_by_date=0&type=episode&offset=0&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0'`)
+// router.get('/search/episode/:query',async function(req,res){
+//     let query = req.params.query
+//     const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/search?q=${query}&sort_by_date=0&type=episode&offset=0&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0'`)
+//     .header('X-ListenAPI-Key', `${apiKey}`)
+//     response.toJSON();
+//     res.send(response.body.results)
+// })
+
+router.get('/search/episode/:episodeid',async function(req,res){
+    let episodeId = req.params.episodeid
+    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/podcasts/${episodeId}`)
     .header('X-ListenAPI-Key', `${apiKey}`)
     response.toJSON();
-    res.send(response.body.results)
+    res.send(response.body.episodes)
 })
+
 
 router.get('/search/podcast/:query',async function(req,res){
     let query = req.params.query
