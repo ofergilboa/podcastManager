@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const request = require('request');
-const api = require('.server/route/api')
+const api = require('./server/route/api')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/podcastDB', {useNewUrlParser: true})
