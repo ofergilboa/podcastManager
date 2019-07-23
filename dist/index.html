@@ -55,11 +55,11 @@
  <div class="pods"></div>
     <!-- handlebars  podcasts -->
     <script id="pod-template" type="text/x-handlebars-template">
-        {{#each this}}
+        {{#each data}}
          <div class="podData">
-            <div class="Title"> {{this.title_original}}</div>
-            <div class="thumbnail"><img class="img" src="{{this.image}}"></div>
-            <div class="description">{{this.description_original}}</div>
+            <div class="Title"> {{title_original}}</div>
+            <div class="thumbnail"><img class="img" src="{{image}}"></div>
+            <!-- <div class="description">{{description_original}}</div> -->
          </div>
         {{/each}}
     </script>

@@ -22,3 +22,14 @@
     position: fixed;
     top: 3vh;
 }
+
+.podData{
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+}
+.thumbnail{
+    max-width:100%;
+    max-height:100%;
+
+}
