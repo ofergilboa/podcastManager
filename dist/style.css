@@ -1,0 +1,24 @@
+#userBar{
+    width: 100vh;
+    position: fixed;
+    bottom: 3vh;
+}
+
+.home{
+    display: inline-block;
+}
+.favourites{
+    display: inline-block;
+}
+.podInput{
+    display: inline-block;
+
+}
+.button{
+    display: inline-block;
+}
+
+#mediaPlayer{
+    position: fixed;
+    top: 3vh;
+}

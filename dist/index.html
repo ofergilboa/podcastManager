@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <rel="stylesheet">
-        </rel>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://kit.fontawesome.com/b9b250eb6d.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <title>PodManager</title>
 </head>
-
 <body>
-
     <!-- materialize -->
 
     <!-- <a class="waves-effect waves-light btn">button</a>
@@ -29,43 +26,22 @@
             <a class="btn disabled">Button</a>
         </div> -->
 
-
-    <!-- header -->
-
-    <header>
-        <input id="input" placeholder="city">
-        <button id="inputButton">get city</button>
-    </header>
-
-    <!-- main -->
-
-    <main>
-        <div id="allCities">
-            <div id="city"></div>
+    <div id="userBar" >
+        <div class="home">
+            <i class="fas fa-home"></i>
         </div>
-        <ul id="cities"></ul>
-    </main>
+        <div class="favourites">
+            <i class="fas fa-star"></i>
+        </div>
+        <input class="podInput" type="text" name="" id="">
+      
+        <button class="bttn">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
 
-    <!-- footer -->
 
-    <footer>
-        <div id="citiesContainer"></div>
-    </footer>
-
-    <!-- handleBars -->
-
-    <!-- <script id="city-template" type="text/x-handlebars-template">
-        {{#each allCityData}}
-            <div id="city">
-                <div id="name">{{name}}</div>
-                <div id="temperature">{{temperature}}</div>
-                <div id="updatedAt">{{updatedAt}}</div>
-                <div id="conditions">{{conditions}}</div>
-                <div id="conditionPic"><img src={{img}}></div>
-                <button id="saveButton">+</button>
-            </div>
-        {{/each}}
-    </script> -->
+    <div id="mediaPlayer">Media player placeholder</div>
 
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
@@ -73,5 +49,4 @@
     <script src="logic.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
