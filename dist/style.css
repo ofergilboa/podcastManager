@@ -22,3 +22,23 @@
     position: fixed;
     top: 3vh;
 }
+
+.podData{
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+}
+.thumbnail{
+    max-width:100%;
+    max-height:100%;
+
+}
+/* img.img {
+width: calc(15px + 3vw);
+height: calc( 15px + 3vw);
+transition: 1s;
+}
+img.img:hover {
+    width: 300px;
+    height: 300px;
+} */
