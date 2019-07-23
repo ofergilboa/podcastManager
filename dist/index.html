@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <rel="stylesheet">
+        </rel>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+    <!-- materialize -->
+
+    <!-- <a class="waves-effect waves-light btn">button</a>
+
+        <div class="row">
+            <div class="col s3 blue">3-1</div>
+            <div class="col s3 red">3-2</div>
+            <div class="col s6 purple">6</div>
+        </div>
+
+        <div class="wrapper">
+            <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>button</a>
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            <a class="btn disabled">Button</a>
+        </div> -->
+
+
+    <!-- header -->
+
+    <header>
+        <input id="input" placeholder="city">
+        <button id="inputButton">get city</button>
+    </header>
+
+    <!-- main -->
+
+    <main>
+        <div id="allCities">
+            <div id="city"></div>
+        </div>
+        <ul id="cities"></ul>
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+        <div id="citiesContainer"></div>
+    </footer>
+
+    <!-- handleBars -->
+
+    <!-- <script id="city-template" type="text/x-handlebars-template">
+        {{#each allCityData}}
+            <div id="city">
+                <div id="name">{{name}}</div>
+                <div id="temperature">{{temperature}}</div>
+                <div id="updatedAt">{{updatedAt}}</div>
+                <div id="conditions">{{conditions}}</div>
+                <div id="conditionPic"><img src={{img}}></div>
+                <button id="saveButton">+</button>
+            </div>
+        {{/each}}
+    </script> -->
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="renderer.js"></script>
+    <script src="logic.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
