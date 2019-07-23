@@ -35,11 +35,34 @@
         </div>
         <input class="podInput" type="text" name="" id="">
       
-        <button class="bttn">
+        <button class="bttn" style="cursor: pointer" onclick=handleSearch()>
             <i class="fas fa-search"></i>
         </button>
     </div>
 
+
+<div class="main"></div>
+        <!-- handlebars homePage -->
+<script id="homePage-template" type="text/x-handlebars-template">
+        {{#each this}}
+    <div class="genres">
+            <div class="genreBox">{{this.genre}}</div>
+    </div>
+        {{/each}}
+</script>
+ </div>
+
+ <div class="pods"></div>
+    <!-- handlebars  podcasts -->
+    <script id="pod-template" type="text/x-handlebars-template">
+        {{#each this}}
+         <div class="podData">
+            <div class="Title"> {{this.title}}</div>
+            <div class="thumbnail"><img class="img" src="{{this.conditionPic}}"></div>
+            <div class="description">{{this.description}}</div>
+         </div>
+        {{/each}}
+    </script>
 
     <div id="mediaPlayer">Media player placeholder</div>
 
