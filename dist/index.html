@@ -35,7 +35,7 @@
         </div>
         <input class="podInput" type="text" name="" id="">
       
-        <button class="bttn" style="cursor: pointer" onclick=handleSearch()>
+        <button class="bttn" style="cursor: pointer" onclick=getPods()>
             <i class="fas fa-search"></i>
         </button>
     </div>
@@ -57,17 +57,20 @@
     <script id="pod-template" type="text/x-handlebars-template">
         {{#each this}}
          <div class="podData">
-            <div class="Title"> {{this.title}}</div>
-            <div class="thumbnail"><img class="img" src="{{this.conditionPic}}"></div>
-            <div class="description">{{this.description}}</div>
+            <div class="Title"> {{this.title_original}}</div>
+            <div class="thumbnail"><img class="img" src="{{this.image}}"></div>
+            <div class="description">{{this.description_original}}</div>
          </div>
         {{/each}}
     </script>
 
     <div id="mediaPlayer">Media player placeholder</div>
 
-    <script src="../jquery.js"></script>
-    <script src="../handlebars.js"></script>
+
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="podManager.js"></script>
+
     <script src="renderer.js"></script>
     <script src="logic.js"></script>
     <script src="main.js"></script>
