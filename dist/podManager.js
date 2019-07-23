@@ -9,12 +9,14 @@ async getDataFromDB(){
 }
 
 async getPodData(podName){
+    this.podData = []
     let data = await $.get(`/search/podcast/${podName}`)
     data.forEach( d => this.podData.push(d))
     }
 
-    async getEpisodesData(id){
+async getEpisodesData(id){
         let data = await $.get(`/search/episode/${id}`)
+        renderer.render2(data)
         console.log(data)
     }
 
@@ -22,5 +24,5 @@ async getPodData(podName){
 
 
   }
-}
+
 
