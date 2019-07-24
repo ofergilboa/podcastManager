@@ -5,7 +5,11 @@ const path = require('path')
 const apiKey = '956403ac7a794573ba7500fd93b0832b'
 const unirest = require('unirest');
 const gnrs = require('../model/genres')
+const sGnrs = require('../model/sortedGenres')
 const genres = gnrs.genres
+const selGenres = gnrs.selGenres
+const srtGenres = sGnrs.genres
+const srtGenresIdArray = sGnrs.ids
 
 
 //**********************************************************
@@ -58,14 +62,16 @@ router.get('/search/genre/:name', async function(req,res){
     res.send(response.body.podcasts)
 })
 
+router.get('/search/bestGenres/:id', async function(req,res){
+    let id = req.params.id;
+    let data = []
+    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/best_podcasts?genre_id=${id}&safe_mode=1`)
+    .header('X-ListenAPI-Key', `${apiKey}`)
+    response.toJSON();
+    res.send(response.body.podcasts)
+})
 
 
-// router.get('/genres', async function(req,res){
-//     const response = await unirest.get('https://listen-api.listennotes.com/api/v2/genres')
-//       .header('X-ListenAPI-Key', `${apiKey}`)
-//     response.toJSON();
-//     res.send(response.body.genres)
-// })
 
 
 
