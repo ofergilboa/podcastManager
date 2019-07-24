@@ -51,17 +51,6 @@
                 </div>
             </div>
 
-        <div class="main"></div>
-                <!-- handlebars homePage -->
-        <script id="main-template" type="text/x-handlebars-template">
-                {{#each this}}
-            <div class="genres">
-                    <img class="genreImg" src="{{image}}" data-id="{{id}}">
-                    
-            </div>
-                {{/each}}
-        </script>
-        </div>
 
         <div class="pods"></div>
             <!-- handlebars  podcasts -->
@@ -101,6 +90,7 @@
 
 
 
+    <script src="../server/model/sortedGenres.js"></script>
     <script src="/handlebars/dist/handlebars.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/jquery/dist/jquery.js"></script>

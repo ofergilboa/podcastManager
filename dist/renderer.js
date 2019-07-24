@@ -43,3 +43,4 @@ class Renderer {
         //     $('.favourites').append(someHTML)
         // }
 }
+
