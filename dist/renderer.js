@@ -32,6 +32,19 @@ class Renderer {
         const someHTML = template({data:episodeData})
         $('.episodes').append(someHTML)
     }
+
+    renderGenres(podData) {
+        $('.episodes').empty()
+        $('.main').empty()
+        $('.pods').empty()
+        $('.favourites').empty()
+        const source = $('#genres-template').html()
+        const template = Handlebars.compile(source)
+        const someHTML = template({data:podData})
+        $('.pods').append(someHTML)
+
+    }
+
  
         // renderFavourites(favouritesData){
         //     $('.pods').empty()

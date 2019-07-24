@@ -71,6 +71,17 @@
                 </div>
                 {{/each}}
             </script>
+            <script id="genres-template" type="text/x-handlebars-template">
+                {{#each data}}
+                <div class="podData">
+                    <!-- <div class="title"> {{title_original}}</div> -->
+                    <img class="img-genre" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
+                    <!-- <div class="description">{{description_original}}</div> -->
+
+                </div>
+                {{/each}}
+            </script>
+
         <!-- <div class="wrapper">
             <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>button</a>
             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
