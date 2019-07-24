@@ -5,7 +5,7 @@ class PodManager {
 
 
 async getGenres(genres){
-    let data = await $.get('/')
+    let data = await $.get('')
 }
 
 // async getDataFromDB(){
