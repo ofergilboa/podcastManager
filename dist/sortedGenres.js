@@ -12,7 +12,7 @@ class SortedGenres{
                 "id": 93,
                 "title_original": "Business",
                 "parent_id": 67,
-                "image": "02 Bussines.jpg"
+                "image": "02 Business.jpg"
         
             },
             {

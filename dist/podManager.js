@@ -14,6 +14,8 @@ class PodManager {
         let data = await $.get(`/search/podcast/${podName}`)
         data.forEach(d => this.podData.push(d))
 
+    }
+
 
 
 
@@ -24,5 +26,3 @@ class PodManager {
     }
 
 }
-
-

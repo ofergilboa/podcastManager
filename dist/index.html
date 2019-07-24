@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,20 @@
     <script src="https://kit.fontawesome.com/b9b250eb6d.js"></script>
     <title>PodManager</title>
     <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css“>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
 
 
 
-<header>
-    <div id="anEpisode">
-        <div id="audioE"></div>
-    </div>
+    <header>
+        <div id="anEpisode">
+            <div id="audioE"></div>
+        </div>
 
 
-    <script id="audio-template" type="text/x-handlebars-template">
+        <script id="audio-template" type="text/x-handlebars-template">
         <div id="podcast">
             <div id="bar"></div>
             <div id="audio">
@@ -40,14 +42,14 @@
             <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>button</a>
             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
             <a class="btn disabled">Button</a>
-        </div> -->
+        </div>
 
-    <audio id="mediaPlayer" controls style="width: 94%">
+    <!-- <audio id="mediaPlayer" controls style="width: 94%">
         <source src="" type="audio/mpeg">
-    </audio>
+    </audio> -->
 
 
-                <div id="fn" hidden>
+                <!-- <div id="fn" hidden>
                         <input class="podInput"" type="text" placeholder="Find a podcast!" />
                 </div>
 
@@ -59,29 +61,29 @@
                     <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
                 </div>
                 <div class="bttn">
-                <!-- <input class="podInput" type="text" autofocus placeholder="Find a podcast"> -->
-                    <i class="fas fa-search fa-2x" style="cursor: pointer"></i>
+                <input class="podInput" type="text" autofocus placeholder="Find a podcast"> -->
+                    <!-- <i class="fas fa-search fa-2x" style="cursor: pointer"></i>
                 </div>
 
             </div>
-        </div>
-    </script>
-</header>
+        </div> -->
+    <!-- </script> -->
+    </header>
 
 
-<main>
-    <div class="main"></div>
-            <!-- handlebars homePage -->
-    <script id="homePage-template" type="text/x-handlebars-template">
+    <main>
+        <div class="main"></div>
+        <!-- handlebars homePage -->
+        <script id="homePage-template" type="text/x-handlebars-template">
             {{#each this}}
         <div class="genres">
                 <div class="genreBox">{{this.genre}}</div>
         </div>
             {{/each}}
     </script>
-    </div>
-    
-    <div class="pods"></div>
+        </div>
+
+        <div class="pods"></div>
         <!-- handlebars  podcasts -->
         <script id="pod-template" type="text/x-handlebars-template">
             {{#each data}}
@@ -92,11 +94,11 @@
             </div>
             {{/each}}
         </script>
-    
-    
-            <div class="episodes"></div>
-            <!-- handlebars episodes -->
-            <script id="episodes-template" type="text/x-handlebars-template">
+
+
+        <div class="episodes"></div>
+        <!-- handlebars episodes -->
+        <script id="episodes-template" type="text/x-handlebars-template">
                     <div class="epData" >
                     {{#each_upto data 1}}
                     <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
@@ -110,11 +112,13 @@
                     <i class="fas fa-play"></i>
                     </div>
                     <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
-
+                    </div>
+                    {{/each}}
+</script>
 
         <div class="pods"></div>
-            <!-- handlebars  podcasts -->
-            <script id="pod-template" type="text/x-handlebars-template">
+        <!-- handlebars  podcasts -->
+        <script id="pod-template" type="text/x-handlebars-template">
                 {{#each data}}
                 <div class="podData">
                     <!-- <div class="title"> {{title_original}}</div> -->
@@ -129,27 +133,29 @@
             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
             <a class="btn disabled">Button</a>
         </div> -->
-    
+
         <!-- <audio id="mediaPlayer" controls style="width: 94%">
             <source src="" type="audio/mpeg">
         </audio> -->
-</main>
+    </main>
 
-<footer>
-    <div id="userBar" >
-        <span class="footer homeBar" id = "home" ><i class="Medium material-icons">home</i></span>
-        <span class="footer homeBar favourites" id = "home" class = "homeBar"><i class="Medium material-icons">star</i></span>
-        <span class="footer podInput podInput inputBttn" id = "input"><input id="podcastInput" type="text" autofocus placeholder="Find a podcast"></span>
-        <button class= "footer  getPods"><i class="bttn material-icons">search</i></button>
-    </span>
-</div>
-</footer>
+    <footer>
+        <div id="userBar">
+            <span class="footer homeBar" id="home"><i class="Medium material-icons">home</i></span>
+            <span class="footer homeBar favourites" id="home" class="homeBar"><i
+                    class="Medium material-icons">star</i></span>
+            <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text" autofocus
+                    placeholder="Find a podcast"></span>
+            <button class="footer  getPods"><i class="bttn material-icons">search</i></button>
+            </span>
+        </div>
+    </footer>
 
 
 
-                <div class="episodes"></div>
-                <!-- handlebars episodes -->
-                <script id="episodes-template" type="text/x-handlebars-template">
+    <div class="episodes"></div>
+    <!-- handlebars episodes -->
+    <script id="episodes-template" type="text/x-handlebars-template">
                         <div class="epData" >
                         {{#each_upto data 1}}
                         <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh" data-id="{{podcast_id}}" data-title="{{podcast_title_original}}">
@@ -173,17 +179,16 @@
 
 
 
-    <script src="../server/model/sortedGenres.js"></script>
-    <script src="/handlebars/dist/handlebars.js"></script>
+    <!-- <script src="../server/model/sortedGenres.js"></script> -->
+    <script src="handlebars/dist/handlebars.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="podManager.js"></script>
     <script src="audioPlay.js"></script>
     <script src="sortedGenres.js"></script>
     <script src="renderer.js"></script>
-    <script src="logic.js"></script>
+    <!-- <script src="logic.js"></script> -->
     <script src="main.js"></script>
 </body>
+
 </html>
-
-

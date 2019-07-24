@@ -37,8 +37,8 @@ $('.favourites').on('click', function(){
 })
 
 $('.bttn').on('click', function(){
-    $("#fn").show()
-    // renderer.renderFavourites(podManager.())
+getPods()  
+  // renderer.renderFavourites(podManager.())
 })
 
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
