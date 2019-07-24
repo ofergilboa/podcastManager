@@ -83,14 +83,13 @@ router.get('/search/bestGenres/:id', async function(req,res){
 router.post('/podcast',function(req,res){
     let data = req.body;
     let podcast = new Podcast ({
-        title: null,
-        id: null,
-        picture: null
+        title: data.data('title'),
+        id: data.data('id'),
+        picture: data.src
         })
     podcast.save()
     res.send(`podcast added successfuly to db.`)
 })
-
 
 //**********************************************************
 
