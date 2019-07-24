@@ -1,14 +1,14 @@
 class Renderer {
-    // renderHome(genresData) {
-    //     $('.main').empty()
-    //      $('.pods').empty()
-    //      $('.episodes').empty()
-    //      $('.favourites').empty()
-    //     const source = $('#homePage-template').html()
-    //     const template = Handlebars.compile(source)
-    //     const someHTML = template({data:genresData})
-    //     $('.main').append(someHTML)
-    // }
+    renderMain(genresData) {
+        $('.main').empty()
+         $('.pods').empty()
+         $('.episodes').empty()
+         $('.favourites').empty()
+        const source = $('#main-template').html()
+        const template = Handlebars.compile(source)
+        const someHTML = template({data:genresData})
+        $('.main').append(someHTML)
+    }
 
     render(podData) {
         $('.episodes').empty()
@@ -33,7 +33,6 @@ class Renderer {
         $('.episodes').append(someHTML)
     }
  
-
         // renderFavourites(favouritesData){
         //     $('.pods').empty()
         //     $('.episodes').empty()
@@ -42,6 +41,5 @@ class Renderer {
         //     const template = Handlebars.compile(source)
         //     const someHTML = template({data:favouritesData})
         //     $('.favourites').append(someHTML)
-
         // }
 }
