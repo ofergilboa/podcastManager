@@ -17,7 +17,7 @@ const getPods = async function () {
     // console.log(podManager.podData)
 }
 
-$('.img-genre').on('click',async function(){
+$('.pods').on('click','.img-genre',async function(){
     let genreId = $(this).data('id')
     let data = await $.get(`/search/bestGenres/${genreId}`)
     renderer.renderGenresResults(data)
@@ -36,7 +36,8 @@ $('.pods').on('click', '.img-genre-result', function () {
 })
 
 
-$('#home').on('click', function(){
+$('#home').on('click',  function(){
+
 renderer.renderGenres(srtGenres.genres)
 })
 
