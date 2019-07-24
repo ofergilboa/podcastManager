@@ -17,12 +17,15 @@ class PodManager {
     }
 
 
-
-
     async getEpisodesData(id) {
         let data = await $.get(`/search/episode/${id}`)
         renderer.render2(data)
         console.log(data)
+    }
+
+    async getPodcastsByGenreId(id){
+        let data = await $.get(`/search/bestGenres/${id}`)
+        renderer.render(data)
     }
 
 }

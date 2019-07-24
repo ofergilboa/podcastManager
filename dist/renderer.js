@@ -46,6 +46,17 @@ class Renderer {
 
     }
 
+    renderGenresResults(data){
+        $('.episodes').empty()
+        $('.main').empty()
+        $('.pods').empty()
+        $('.favourites').empty()
+        const source = $('#genres-results-template').html()
+        const template = Handlebars.compile(source)
+        const someHTML = template({data:data})
+        $('.pods').append(someHTML)
+    }
+
  
         // renderFavourites(favouritesData){
         //     $('.pods').empty()
