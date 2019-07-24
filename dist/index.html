@@ -17,10 +17,20 @@
 
 
     <header>
-        <div id="anEpisode">
-            <div id="audioE"></div>
-        </div>
+        <!-- <div id="wrapper">
+            <div id='player'>
+                <audio id="music_player">
+                    <source src="Burst.mp3" />
+                </audio>
+                <input type="image" src="play-button.png" onclick="play_aud()" id="play_button">
+                <input type="image" src="music-player-pause-lines.png" onclick="pause_aud()" id="play_button">
+                <input type="image" src="video-player-stop-button.png" onclick="stop_aud()" id="play_button">
+                <img src="speaker-filled-audio-tool.png" id="vol_img">
+                <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+            </div>
+        </div> -->
 
+        <div class="episodes"></div>
 
         <script id="audio-template" type="text/x-handlebars-template">
         <div id="podcast">
@@ -43,6 +53,7 @@
 <main>
         <div class="episodes"></div>
         <!-- handlebars episodes -->
+
         <script id="episodes-template" type="text/x-handlebars-template">
                     <div class="epData" >
                     {{#each_upto data 1}}
@@ -61,6 +72,7 @@
         </script>
 
         <div class="pods"></div>
+
         <!-- handlebars  podcasts -->
 
         <script id="pod-template" type="text/x-handlebars-template">
@@ -73,7 +85,7 @@
 
         <!-- handlebars  genres -->
 
-            <script id="genres-template" type="text/x-handlebars-template">
+        <script id="genres-template" type="text/x-handlebars-template">
                 {{#each data}}
                 <div class="podData">
                     <img class="img-genre" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
@@ -83,7 +95,7 @@
 
         <!-- handlebars  genres-results -->
 
-            <script id="genres-results-template" type="text/x-handlebars-template">
+        <script id="genres-results-template" type="text/x-handlebars-template">
                 {{#each data}}
                 <div class="podData pods2">
                     <img class="img-genre-result" src="{{image}}" data-id="{{id}}" data-title="{{title}}">
