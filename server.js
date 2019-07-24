@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/podcastDB', {useNewUrlParser: true})
 
 
 app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'category-images')))
 app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

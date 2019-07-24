@@ -3,6 +3,7 @@ class PodManager {
         this.podData = []
     }
 
+
     async getDataFromDB() {
         let data = await $.get('/search/podcast')
         this.cityData = data
@@ -12,7 +13,9 @@ class PodManager {
         this.podData = []
         let data = await $.get(`/search/podcast/${podName}`)
         data.forEach(d => this.podData.push(d))
-    }
+
+
+
 
     async getEpisodesData(id) {
         let data = await $.get(`/search/episode/${id}`)
