@@ -37,62 +37,6 @@
                     <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
                     <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
                 </div>            
-
-        <div class="wrapper">
-            <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>button</a>
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-            <a class="btn disabled">Button</a>
-        </div>
-
-    <!-- <audio id="mediaPlayer" controls style="width: 94%">
-        <source src="" type="audio/mpeg">
-    </audio> -->
-
-
-                <!-- <div id="fn" hidden>
-                        <input class="podInput"" type="text" placeholder="Find a podcast!" />
-                </div>
-
-            <div id="userBar" >
-                <div class="home">
-                    <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
-                </div>
-                <div class="favourites">
-                    <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
-                </div>
-                <div class="bttn">
-                <input class="podInput" type="text" autofocus placeholder="Find a podcast"> -->
-                    <!-- <i class="fas fa-search fa-2x" style="cursor: pointer"></i>
-                </div>
-
-            </div>
-        </div> -->
-    <!-- </script> -->
-    </header>
-
-
-    <main>
-        <div class="main"></div>
-        <!-- handlebars homePage -->
-        <script id="homePage-template" type="text/x-handlebars-template">
-            {{#each this}}
-        <div class="genres">
-                <div class="genreBox">{{this.genre}}</div>
-        </div>
-            {{/each}}
-    </script>
-        </div>
-
-        <div class="pods"></div>
-        <!-- handlebars  podcasts -->
-        <script id="pod-template" type="text/x-handlebars-template">
-            {{#each data}}
-            <div class="podData">
-                <!-- <div class="title"> {{title_original}}</div> -->
-                <img class="img" src="{{image}}" data-id="{{id}}">
-                <!-- <div class="description">{{description_original}}</div> -->
-            </div>
-            {{/each}}
         </script>
 
 
@@ -114,7 +58,7 @@
                     <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
                     </div>
                     {{/each}}
-</script>
+        </script>
 
         <div class="pods"></div>
         <!-- handlebars  podcasts -->
@@ -150,33 +94,6 @@
             </span>
         </div>
     </footer>
-
-
-
-    <div class="episodes"></div>
-    <!-- handlebars episodes -->
-    <script id="episodes-template" type="text/x-handlebars-template">
-                        <div class="epData" >
-                        {{#each_upto data 1}}
-                        <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh" data-id="{{podcast_id}}" data-title="{{podcast_title_original}}">
-                        </div>
-                    {{/each_upto}}
-            
-                    {{#each data}}
-                    <div class="epData">
-                        <div class="title">
-                        <div class="episode-title">{{title}}</div>
-                        <i class="fas fa-play"></i>
-                        </div>
-                        <audio controls>
-                            <source src="{{audio}}" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    {{/each}}
-                </script>
-
-
-
 
 
     <!-- <script src="../server/model/sortedGenres.js"></script> -->
