@@ -27,10 +27,18 @@ router.get('/search/episode/:episodeid',async function(req,res){
 })
 
 
+// router.get('/search/podcast/:query',async function(req,res){
+//     let query = req.params.query
+//     const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/search?q=${query}&sort_by_date=0&type=podcast&offset=1&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0'`)
+//     .header('X-ListenAPI-Key', `${apiKey}`)
+//     response.toJSON();
+//     res.send(response.body.results)
+// })
+
 router.get('/search/podcast/:query',async function(req,res){
     let query = req.params.query
     const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/search?q=${query}&sort_by_date=0&type=podcast&offset=1&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0'`)
-    .header('X-ListenAPI-Key', `${apiKey}`)
+    .header('X-ListenAPI-Key', `${apiKey}`);
     response.toJSON();
     res.send(response.body.results)
 })
