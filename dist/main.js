@@ -1,6 +1,7 @@
 const renderer = new Renderer()
 const podManager = new PodManager()
 const srtGenres = new SortedGenres()
+const createAudio = new audioPlay()
 
 let loadPage = function() {
     renderer.renderGenres(srtGenres.genres)
@@ -23,7 +24,7 @@ $('.img-genre').on('click',function(){
 $('.pods').on('click', '.img', function () {
     let podID = $(this).data('id')
     console.log(podID)
-    
+    // createAudio.createAudioObj(podID)
     renderer.render2(podManager.getEpisodesData(podID))
 })
 

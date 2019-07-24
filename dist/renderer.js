@@ -23,6 +23,7 @@ class Renderer {
     }
 
     render2(episodeData){
+        console.log(episodeData)
         $('.pods').empty()
         $('.episodes').empty()
         $('.main').empty()
