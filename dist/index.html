@@ -38,14 +38,15 @@
                     <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
                 </div>            
         </script>
+    </header>
 
-
+<main>
         <div class="episodes"></div>
         <!-- handlebars episodes -->
         <script id="episodes-template" type="text/x-handlebars-template">
                     <div class="epData" >
                     {{#each_upto data 1}}
-                    <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+                    <img class="epImg" src="{{image}}" alt="" >
                     </div>
                 {{/each_upto}}
         
@@ -64,7 +65,7 @@
 
         <script id="pod-template" type="text/x-handlebars-template">
                 {{#each data}}
-                <div class="podData">
+                <div class="podData pods2">
                     <img class="img" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
                 </div>
                 {{/each}}
@@ -84,7 +85,7 @@
 
             <script id="genres-results-template" type="text/x-handlebars-template">
                 {{#each data}}
-                <div class="podData">
+                <div class="podData pods2">
                     <img class="img-genre-result" src="{{image}}" data-id="{{id}}" data-title="{{title}}">
                 </div>
                 {{/each}}
@@ -95,11 +96,21 @@
     <footer>
         <div id="userBar">
             <span class="footer homeBar" id="home"><i class="Medium material-icons">home</i></span>
-            <span class="footer homeBar favourites" id="home" class="homeBar"><i
-                    class="Medium material-icons">star</i></span>
-            <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text" autofocus
-                    placeholder="Find a podcast"></span>
+            <span class="footer homeBar"><i class="Medium material-icons">person</i></span>
+            <!-- <span class="footer homeBar favourites"><i class="Medium material-icons">person</i></span> -->
+            <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text" autofocus placeholder="Find a podcast"></span>
             <button class="footer  getPods"><i class="bttn material-icons">search</i></button>
+            <!-- <nav>
+                <div class="nav-wrapper">
+                  <form>
+                    <div class="getPods input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="bttn material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </form>
+                </div>
+              </nav> -->
             </span>
         </div>
     </footer>
