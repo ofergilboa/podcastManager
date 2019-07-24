@@ -16,8 +16,10 @@ const getPods = async function () {
     // console.log(podManager.podData)
 }
 
-$('.img-genre').on('click',function(){
-    alert('yes')
+$('.img-genre').on('click',async function(){
+    let genreId = $(this).data('id')
+    let data = await $.get(`/search/bestGenres/${genreId}`)
+    renderer.renderGenresResults(data)
 })
 
 $('.pods').on('click', '.img', function () {
@@ -26,7 +28,13 @@ $('.pods').on('click', '.img', function () {
     renderer.render2(podManager.getEpisodesData(podID))
 })
 
-$('#home').on('click', function(){
+$('.pods').on('click', '.img-genre-result', function () {
+    let id = $(this).data('id')
+    podManager.getEpisodesData(id)
+})
+
+
+$('.home').on('click', function(){
     alert('clicking home')
     // renderer.renderHome(podManager.())
 })
