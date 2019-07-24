@@ -26,18 +26,23 @@
             <a class="btn disabled">Button</a>
         </div> -->
 
+    <audio id="mediaPlayer" controls style="width: 94%">
+        <source src="" type="audio/mpeg">
+    </audio>
+
     <div id="userBar" >
         <div class="home">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
         </div>
         <div class="favourites">
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
         </div>
-        <input class="podInput" type="text" name="" id="">
-      
+        <div class="inputBttn">
+        <input class="podInput" type="text" autofocus placeholder="Find a podcast">
         <button class="bttn" style="cursor: pointer" onclick=getPods()>
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search fa-lg"></i>
         </button>
+        </div>
     </div>
 
 
@@ -57,8 +62,8 @@
     <script id="pod-template" type="text/x-handlebars-template">
         {{#each data}}
          <div class="podData">
-            <div class="title"> {{title_original}}</div>
-            <div class="thumbnail"><img class="img" src="{{image}}" data-id="{{id}}"></div>
+            <!-- <div class="title"> {{title_original}}</div> -->
+            <img class="img" src="{{image}}" data-id="{{id}}">
             <!-- <div class="description">{{description_original}}</div> -->
          </div>
         {{/each}}
@@ -68,10 +73,18 @@
     <div class="episodes"></div>
     <!-- handlebars episodes -->
     <script id="episodes-template" type="text/x-handlebars-template">
+            <div class="epData" >
+            {{#each_upto data 1}}
+            <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+            </div>
+        {{/each_upto}}
+
         {{#each data}}
         <div class="epData">
+            <div class="title">
             <div class="episode-title">{{title}}</div>
-            <img src="{{image}}" alt="">
+            <i class="fas fa-play"></i>
+            </div>
             <audio controls>
                 <source src="{{audio}}" type="audio/mpeg">
             </audio>
@@ -80,7 +93,6 @@
     </script>
 
 
-    <div id="mediaPlayer">Media player placeholder</div>
 
 
     <script src="handlebars/dist/handlebars.js"></script>
