@@ -37,8 +37,7 @@ $('.pods').on('click', '.img-genre-result', function () {
 
 
 $('#home').on('click', function(){
-    renderer.renderMain(podManager.getPodcastsByGenreId(id))
-    // renderer.renderHome(podManager.())
+renderer.renderGenres(srtGenres.genres)
 })
 
 $('.favourites').on('click', function(){

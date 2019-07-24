@@ -81,6 +81,7 @@ main {
   color: whitesmoke;
   flex-shrink: 1;
   height: 5vh;
+  cursor: pointer
 }
 .favourites {
   display: inline-block;
