@@ -34,8 +34,8 @@ $('.pods').on('click', '.img-genre-result', function () {
 })
 
 
-$('.home').on('click', function(){
-    alert('clicking home')
+$('#home').on('click', function(){
+    renderer.renderMain(podManager.getPodcastsByGenreId(id))
     // renderer.renderHome(podManager.())
 })
 
@@ -48,6 +48,11 @@ $('.bttn').on('click', function(){
 getPods()  
   // renderer.renderFavourites(podManager.())
 })
+
+$('.episode-title').on('click', function(){
+    alert('hi!')
+})
+
 
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
     if(!ary || ary.length == 0)
@@ -64,3 +69,4 @@ $('.podInput').keypress(function (e) {
 getPods()
     }
 });
+
