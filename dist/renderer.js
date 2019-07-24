@@ -1,9 +1,12 @@
 class Renderer {
-    // render(genresData) {
+    // renderHome(genresData) {
     //     $('.main').empty()
+    //      $('.pods').empty()
+    //      $('.episodes').empty()
+    //      $('.favourites').empty()
     //     const source = $('#homePage-template').html()
     //     const template = Handlebars.compile(source)
-    //     const someHTML = template(genresData)
+    //     const someHTML = template({data:genresData})
     //     $('.main').append(someHTML)
     // }
 
@@ -11,6 +14,7 @@ class Renderer {
         $('.episodes').empty()
         $('.main').empty()
         $('.pods').empty()
+        $('.favourites').empty()
         const source = $('#pod-template').html()
         const template = Handlebars.compile(source)
         const someHTML = template({data:podData})
@@ -21,11 +25,23 @@ class Renderer {
     render2(episodeData){
         $('.pods').empty()
         $('.episodes').empty()
+        $('.main').empty()
+        $('.favourites').empty()
         const source = $('#episodes-template').html()
         const template = Handlebars.compile(source)
         const someHTML = template({data:episodeData})
         $('.episodes').append(someHTML)
     }
 
-    
+
+        // renderFavourites(favouritesData){
+        //     $('.pods').empty()
+        //     $('.episodes').empty()
+        //     $('.main').empty()
+        //     const source = $('#favourites-template').html()
+        //     const template = Handlebars.compile(source)
+        //     const someHTML = template({data:favouritesData})
+        //     $('.favourites').append(someHTML)
+
+        // }
 }

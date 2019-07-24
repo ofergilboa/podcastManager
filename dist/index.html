@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="https://kit.fontawesome.com/b9b250eb6d.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <title>PodManager</title>
 </head>
 <body>
@@ -30,73 +30,73 @@
         <source src="" type="audio/mpeg">
     </audio>
 
-    <div id="userBar" >
-        <div class="home">
-            <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
-        </div>
-        <div class="favourites">
-            <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
-        </div>
-        <div class="inputBttn">
-        <input class="podInput" type="text" autofocus placeholder="Find a podcast">
-        <button class="bttn" style="cursor: pointer" onclick=getPods()>
-            <i class="fas fa-search fa-lg"></i>
-        </button>
-        </div>
-    </div>
-
-
-<div class="main"></div>
-        <!-- handlebars homePage -->
-<script id="homePage-template" type="text/x-handlebars-template">
-        {{#each this}}
-    <div class="genres">
-            <div class="genreBox">{{this.genre}}</div>
-    </div>
-        {{/each}}
-</script>
- </div>
-
- <div class="pods"></div>
-    <!-- handlebars  podcasts -->
-    <script id="pod-template" type="text/x-handlebars-template">
-        {{#each data}}
-         <div class="podData">
-            <!-- <div class="title"> {{title_original}}</div> -->
-            <img class="img" src="{{image}}" data-id="{{id}}">
-            <!-- <div class="description">{{description_original}}</div> -->
-         </div>
-        {{/each}}
-    </script>
-
-
-    <div class="episodes"></div>
-    <!-- handlebars episodes -->
-    <script id="episodes-template" type="text/x-handlebars-template">
-            <div class="epData" >
-            {{#each_upto data 1}}
-            <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+            <div id="userBar" >
+                <div class="home">
+                    <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
+                </div>
+                <div class="favourites">
+                    <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
+                </div>
+                <div class="inputBttn">
+                <input class="podInput" type="text" autofocus placeholder="Find a podcast">
+                <button class="bttn" style="cursor: pointer">
+                    <i class="fas fa-search fa-lg"></i>
+                </button>
+                </div>
             </div>
-        {{/each_upto}}
- 
-        {{#each data}}
-        <div class="epData">
-            <div class="title">
-            <div class="episode-title">{{title}}</div>
-            <i class="fas fa-play"></i>
+
+
+        <div class="main"></div>
+                <!-- handlebars homePage -->
+        <script id="homePage-template" type="text/x-handlebars-template">
+                {{#each this}}
+            <div class="genres">
+                    <div class="genreBox">{{this.genre}}</div>
             </div>
-            <audio controls>
-                <source src="{{audio}}" type="audio/mpeg">
-            </audio>
+                {{/each}}
+        </script>
         </div>
-        {{/each}}
-    </script>
+
+        <div class="pods"></div>
+            <!-- handlebars  podcasts -->
+            <script id="pod-template" type="text/x-handlebars-template">
+                {{#each data}}
+                <div class="podData">
+                    <!-- <div class="title"> {{title_original}}</div> -->
+                    <img class="img" src="{{image}}" data-id="{{id}}">
+                    <!-- <div class="description">{{description_original}}</div> -->
+                </div>
+                {{/each}}
+            </script>
+
+
+                <div class="episodes"></div>
+                <!-- handlebars episodes -->
+                <script id="episodes-template" type="text/x-handlebars-template">
+                        <div class="epData" >
+                        {{#each_upto data 1}}
+                        <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+                        </div>
+                    {{/each_upto}}
+            
+                    {{#each data}}
+                    <div class="epData">
+                        <div class="title">
+                        <div class="episode-title">{{title}}</div>
+                        <i class="fas fa-play"></i>
+                        </div>
+                        <audio controls>
+                            <source src="{{audio}}" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    {{/each}}
+                </script>
 
 
 
 
-    <script src="handlebars/dist/handlebars.js"></script>
-    <script src="jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
     <script src="podManager.js"></script>
 
     <script src="renderer.js"></script>
