@@ -26,7 +26,7 @@ $('.pods').on('click', '.img', function () {
     renderer.render2(podManager.getEpisodesData(podID))
 })
 
-$('.home').on('click', function(){
+$('#home').on('click', function(){
     alert('clicking home')
     // renderer.renderHome(podManager.())
 })
@@ -40,6 +40,11 @@ $('.bttn').on('click', function(){
 getPods()  
   // renderer.renderFavourites(podManager.())
 })
+
+$('.episode-title').on('click', function(){
+    alert('hi!')
+})
+
 
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
     if(!ary || ary.length == 0)
@@ -56,3 +61,4 @@ $('.podInput').keypress(function (e) {
 getPods()
     }
 });
+
