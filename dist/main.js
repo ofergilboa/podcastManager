@@ -42,7 +42,6 @@ renderer.renderGenres(srtGenres.genres)
 })
 
 $('.favourites').on('click', function(){
-    
     // renderer.renderFavourites(podManager.())
     alert('clicking favs')
 })
