@@ -1,85 +1,85 @@
 let sortedGenres = [
     {
         "id": 100,
-        "name": "Arts",
+        "title_original": "Arts",
         "parent_id": 67,
-        "src": "01 Arts.jpg"
+        "image": "01 Arts.jpg"
     },
     {
         "id": 93,
-        "name": "Business",
+        "title_original": "Business",
         "parent_id": 67,
-        "src": "02 Bussines.jpg"
+        "image": "02 Bussines.jpg"
 
     },
     {
         "id": 133,
-        "name": "Comedy",
+        "title_original": "Comedy",
         "parent_id": 67,
-        "src": "03 Comedy.jpg"
+        "image": "03 Comedy.jpg"
 
     },
     {
         "id": 106,
-        "name": "Fashion & Beauty",
+        "title_original": "Fashion & Beauty",
         "parent_id": 100,
-        "src": "04 Fashion & Beauty.jpg"
+        "image": "04 Fashion & Beauty.jpg"
 
     },
     {
         "id": 168,
-        "name": "Fiction",
+        "title_original": "Fiction",
         "parent_id": 122,
-        "src": "05 Fiction.jpg"
+        "image": "05 Fiction.jpg"
 
     },
     {
         "id": 88,
-        "name": "Health",
+        "title_original": "Health",
         "parent_id": 67,
-        "src": "06 Health.jpg"
+        "image": "06 Health.jpg"
 
     },
     {
         "id": 125,
-        "name": "History",
+        "title_original": "History",
         "parent_id": 122,
-        "src": "07 History.jpg"
+        "image": "07 History.jpg"
 
     },
     {
         "id": 99,
-        "name": "News & Politics",
+        "title_original": "News & Politics",
         "parent_id": 67,
-        "src": "08 News & Politics.jpg"
+        "image": "08 News & Politics.jpg"
 
     },
     {
         "id": 69,
-        "name": "Religion & Spirituality",
+        "title_original": "Religion & Spirituality",
         "parent_id": 67,
-        "src": "09 Religion & Spirituality.jpg"
+        "image": "09 Religion & Spirituality.jpg"
 
     },
     {
         "id": 77,
-        "name": "Sports & Recreation",
+        "title_original": "Sports & Recreation",
         "parent_id": 67,
-        "src": "10 Sports & Recreation.jpg"
+        "image": "10 Sports & Recreation.jpg"
         
     },
     {
         "id": 127,
-        "name": "Technology",
+        "title_original": "Technology",
         "parent_id": 67,
-        "src": " 11 Technology.jpg"
+        "image": " 11 Technology.jpg"
 
     },
     {
         "id": 135,
-        "name": "True Crime",
+        "title_original": "True Crime",
         "parent_id": 122,
-        "src": "12 True Crime.jpg"
+        "image": "12 True Crime.jpg"
     }
 ]
 
