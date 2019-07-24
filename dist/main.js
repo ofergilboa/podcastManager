@@ -1,10 +1,10 @@
 const renderer = new Renderer()
 const podManager = new PodManager()
 
-let loadPage = function() {
-    renderer.render(srtGenres)
-}
-loadPage()
+// let loadPage = function() {
+//     renderer.render(srtGenres)
+// }
+// loadPage()
 
 const getPods = async function () {
     let query = $(".podInput").val()

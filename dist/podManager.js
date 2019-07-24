@@ -4,10 +4,10 @@ class PodManager {
     }
 
 
-async getGenres(genres){
-    let data = await $.get('/')
-    renderer.renderMain(genres)
-}
+// async getGenres(genres){
+//     let data = await $.get('/')
+//     renderer.renderMain(genres)
+// }
 
 // async getDataFromDB(){
 //     let data = await $.get('/search/podcast')
