@@ -1,8 +1,9 @@
 const renderer = new Renderer()
 const podManager = new PodManager()
+const srtGenres = new SortedGenres()
 
 let loadPage = function() {
-    renderer.render(srtGenres)
+    renderer.render(srtGenres.genres)
 }
 loadPage()
 

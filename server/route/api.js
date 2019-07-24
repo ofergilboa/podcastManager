@@ -5,11 +5,7 @@ const path = require('path')
 const apiKey = '956403ac7a794573ba7500fd93b0832b'
 const unirest = require('unirest');
 const gnrs = require('../model/genres')
-const sGnrs = require('../model/sortedGenres')
 const genres = gnrs.genres
-const selGenres = gnrs.selGenres
-const srtGenres = sGnrs.genres
-const srtGenresIdArray = sGnrs.ids
 const model = require('../model/Podcast')
 const Podcast = model.Podcast
 
