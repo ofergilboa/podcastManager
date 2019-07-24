@@ -33,7 +33,6 @@ class Renderer {
         $('.episodes').append(someHTML)
     }
  
-
         // renderFavourites(favouritesData){
         //     $('.pods').empty()
         //     $('.episodes').empty()
@@ -42,6 +41,5 @@ class Renderer {
         //     const template = Handlebars.compile(source)
         //     const someHTML = template({data:favouritesData})
         //     $('.favourites').append(someHTML)
-
         // }
 }

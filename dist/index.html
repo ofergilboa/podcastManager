@@ -30,6 +30,11 @@
         <source src="" type="audio/mpeg">
     </audio>
 
+
+                <div id="fn" hidden>
+                        <input class="podInput"" type="text" placeholder="Find a podcast!" />
+                </div>
+
             <div id="userBar" >
                 <div class="home">
                     <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
@@ -37,21 +42,18 @@
                 <div class="favourites">
                     <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
                 </div>
-                <div class="inputBttn">
-                <input class="podInput" type="text" autofocus placeholder="Find a podcast">
-                <button class="bttn" style="cursor: pointer">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
+                <div class="bttn">
+                <!-- <input class="podInput" type="text" autofocus placeholder="Find a podcast"> -->
+                    <i class="fas fa-search fa-2x" style="cursor: pointer"></i>
                 </div>
             </div>
-
 
         <div class="main"></div>
                 <!-- handlebars homePage -->
         <script id="homePage-template" type="text/x-handlebars-template">
                 {{#each this}}
             <div class="genres">
-                    <div class="genreBox">{{this.genre}}</div>
+                    <img class="genreImg" src="{{image}}" data-id="{{id}}">
             </div>
                 {{/each}}
         </script>

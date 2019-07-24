@@ -15,9 +15,9 @@ const getPods = async function () {
     // console.log(podManager.podData)
 }
 
-$('.bttn').on('click', function(){
-    getPods()
-})
+// $('.bttn').on('click', function(){
+//     getPods()
+// })
 
 $('.pods').on('click', '.img', function () {
     let podID = $(this).data('id')
@@ -35,6 +35,11 @@ $('.favourites').on('click', function(){
     alert('clicking favs')
 })
 
+$('.bttn').on('click', function(){
+    $("#fn").show()
+    // renderer.renderFavourites(podManager.())
+})
+
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
     if(!ary || ary.length == 0)
         return options.inverse(this);
@@ -43,4 +48,10 @@ Handlebars.registerHelper('each_upto', function(ary, max, options) {
     for(var i = 0; i < max && i < ary.length; ++i)
         result.push(options.fn(ary[i]));
     return result.join('');
+});
+
+$('.podInput').keypress(function (e) {
+    if (e.which == 13) {
+getPods()
+    }
 });
