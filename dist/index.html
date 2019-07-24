@@ -81,7 +81,7 @@
                 <script id="episodes-template" type="text/x-handlebars-template">
                         <div class="epData" >
                         {{#each_upto data 1}}
-                        <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+                        <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh" data-id="{{podcast_id}}" data-title="{{podcast_title_original}}">
                         </div>
                     {{/each_upto}}
             
