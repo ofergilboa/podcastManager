@@ -3,7 +3,7 @@ const podManager = new PodManager()
 const srtGenres = new SortedGenres()
 
 let loadPage = function() {
-    renderer.render(srtGenres.genres)
+    renderer.renderGenres(srtGenres.genres)
 }
 loadPage()
 
@@ -16,9 +16,9 @@ const getPods = async function () {
     // console.log(podManager.podData)
 }
 
-// $('.bttn').on('click', function(){
-//     getPods()
-// })
+$('.img-genre').on('click',function(){
+    alert('yes')
+})
 
 $('.pods').on('click', '.img', function () {
     let podID = $(this).data('id')
