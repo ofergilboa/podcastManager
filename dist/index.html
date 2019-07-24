@@ -32,6 +32,23 @@
 
         <div class="episodes"></div>
 
+        <script id="audio-template" type="text/x-handlebars-template">
+            <div id="podcast">
+                <div id="bar"></div>
+                <div id="audio">
+                    <source src="{{audio}}" >
+                    <div id = "progress" class = "text, bar" ></div>
+                    <div id = "playBar">
+                        <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
+                        <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                        <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
+                        <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
+                        <span id = "duration" class = "text, bar">{{duration}}00:00</span>
+                        <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
+                        <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
+                    </div>            
+            </script>
+
         <!-- handlebars episodes -->
 
         <script id="episodes-template" type="text/x-handlebars-template">
