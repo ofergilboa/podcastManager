@@ -8,9 +8,10 @@ const podManager = new PodManager()
 
 
 const getPods = async function () {
-    let query = $(".podInput").val()
-    $(".podInput").val('')
+    let query = $("#podcastInput").val()
+    $("#podcastInput").val('')
     await podManager.getPodData(query)
+    console.log(query)
     renderer.render(podManager.podData)
     // console.log(podManager.podData)
 }

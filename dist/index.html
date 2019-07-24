@@ -8,99 +8,122 @@
     <script src="https://kit.fontawesome.com/b9b250eb6d.js"></script>
     <title>PodManager</title>
     <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css“>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <!-- materialize -->
 
-    <!-- <a class="waves-effect waves-light btn">button</a>
 
-        <div class="row">
-            <div class="col s3 blue">3-1</div>
-            <div class="col s3 red">3-2</div>
-            <div class="col s6 purple">6</div>
+<header>
+    <div id="anEpisode">
+        <div id="audioE"></div>
+    </div>
+
+    <script id="audio-template" type="text/x-handlebars-template">
+        <div id="podcast">
+            <div id="bar"></div>
+            <div id="audio">
+                <source src="{{audio}}" >
+                <div id = "progress" class = "text, bar" ></div>
+                <div id = "playBar">
+                    <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
+                    <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                    <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
+                    <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
+                    <span id = "duration" class = "text, bar">{{duration}}00:00</span>
+                    <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
+                    <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
+                </div>            
+            </div>
         </div>
+    </script>
+</header>
 
-        <div class="wrapper">
+<main>
+    <div class="main"></div>
+            <!-- handlebars homePage -->
+    <script id="homePage-template" type="text/x-handlebars-template">
+            {{#each this}}
+        <div class="genres">
+                <div class="genreBox">{{this.genre}}</div>
+        </div>
+            {{/each}}
+    </script>
+    </div>
+    
+    <div class="pods"></div>
+        <!-- handlebars  podcasts -->
+        <script id="pod-template" type="text/x-handlebars-template">
+            {{#each data}}
+            <div class="podData">
+                <!-- <div class="title"> {{title_original}}</div> -->
+                <img class="img" src="{{image}}" data-id="{{id}}">
+                <!-- <div class="description">{{description_original}}</div> -->
+            </div>
+            {{/each}}
+        </script>
+    
+    
+            <div class="episodes"></div>
+            <!-- handlebars episodes -->
+            <script id="episodes-template" type="text/x-handlebars-template">
+                    <div class="epData" >
+                    {{#each_upto data 1}}
+                    <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+                    </div>
+                {{/each_upto}}
+        
+                {{#each data}}
+                <div class="epData">
+                    <div class="title">
+                    <div class="episode-title">{{title}}</div>
+                    <i class="fas fa-play"></i>
+                    </div>
+                    <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                </div>
+                {{/each}}
+            </script>
+        <!-- <div class="wrapper">
             <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>button</a>
             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
             <a class="btn disabled">Button</a>
         </div> -->
+    
+        <!-- <audio id="mediaPlayer" controls style="width: 94%">
+            <source src="" type="audio/mpeg">
+        </audio> -->
+</main>
 
-    <audio id="mediaPlayer" controls style="width: 94%">
-        <source src="" type="audio/mpeg">
-    </audio>
-
-            <div id="userBar" >
-                <div class="home">
-                    <i class="fas fa-home fa-2x" style="cursor: pointer"></i>
-                </div>
-                <div class="favourites">
-                    <i class="fas fa-star fa-2x" style="cursor: pointer"></i>
-                </div>
-                <div class="inputBttn">
-                <input class="podInput" type="text" autofocus placeholder="Find a podcast">
-                <button class="bttn" style="cursor: pointer">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
-                </div>
-            </div>
+<footer>
+    <div id="userBar" >
+        <span class="footer homeBar" id = "home" ><i class="Medium material-icons">home</i></span>
+        <span class="footer homeBar favourites" id = "home" class = "homeBar"><i class="Medium material-icons">star</i></span>
+        <span class="footer podInput podInput inputBttn" id = "input"><input id="podcastInput" type="text" autofocus placeholder="Find a podcast"></span>
+        <button class= "footer  getPods"><i class="bttn material-icons">search</i></button>
+    </span>
+</div>
+</footer>
 
 
-        <div class="main"></div>
-                <!-- handlebars homePage -->
-        <script id="homePage-template" type="text/x-handlebars-template">
-                {{#each this}}
-            <div class="genres">
-                    <div class="genreBox">{{this.genre}}</div>
-            </div>
-                {{/each}}
-        </script>
-        </div>
-
-        <div class="pods"></div>
-            <!-- handlebars  podcasts -->
-            <script id="pod-template" type="text/x-handlebars-template">
-                {{#each data}}
-                <div class="podData">
-                    <!-- <div class="title"> {{title_original}}</div> -->
-                    <img class="img" src="{{image}}" data-id="{{id}}">
-                    <!-- <div class="description">{{description_original}}</div> -->
-                </div>
-                {{/each}}
-            </script>
-
-
-                <div class="episodes"></div>
-                <!-- handlebars episodes -->
-                <script id="episodes-template" type="text/x-handlebars-template">
-                        <div class="epData" >
-                        {{#each_upto data 1}}
-                        <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
-                        </div>
-                    {{/each_upto}}
-            
-                    {{#each data}}
-                    <div class="epData">
-                        <div class="title">
-                        <div class="episode-title">{{title}}</div>
-                        <i class="fas fa-play"></i>
-                        </div>
-                        <audio controls>
-                            <source src="{{audio}}" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    {{/each}}
-                </script>
+<a class=" btn-floating btn-large waves-effect waves-light red"></a>
 
 
 
-
-    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/jquery/dist/jquery.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
     <script src="podManager.js"></script>
+    <script src="audioPlay.js"></script>
     <script src="renderer.js"></script>
     <script src="logic.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
+
+
+    <!-- materialize -->
+
+    <!-- <div class="row">
+            <div class="col s3 blue">3-1</div>
+            <div class="col s3 red">3-2</div>
+            <div class="col s6 purple">6</div>
+        </div>--> -->
