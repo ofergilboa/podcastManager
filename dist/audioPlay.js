@@ -1,6 +1,10 @@
-const episode = {
-    name: `audio1`,
-    audio: `https://www.listennotes.com/e/p/a3b3b30825b544dc92f8824d9640e3ae/`,
+
+
+const audio = function(){
+
+const createAudioObj = function(episode){
+    const audio = new Audio
+    audio.src = episode.audio
 }
 
 const renderData = function (data) {
@@ -15,3 +19,6 @@ const renderData = function (data) {
 renderData(episode)
 
 console.log(episode)
+}
+
+module.exports = createAudio
