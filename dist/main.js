@@ -36,9 +36,8 @@ $('.pods').on('click', '.img-genre-result', function () {
 })
 
 
-$('.home').on('click', function(){
-    alert('clicking home')
-    // renderer.renderHome(podManager.())
+$('#home').on('click', function(){
+renderer.renderGenres(srtGenres.genres)
 })
 
 $('.favourites').on('click', function(){
@@ -50,6 +49,11 @@ $('.bttn').on('click', function(){
 getPods()  
   // renderer.renderFavourites(podManager.())
 })
+
+$('.episode-title').on('click', function(){
+    alert('hi!')
+})
+
 
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
     if(!ary || ary.length == 0)
@@ -66,3 +70,4 @@ $('.podInput').keypress(function (e) {
 getPods()
     }
 });
+
