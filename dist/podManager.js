@@ -14,27 +14,12 @@ async getPodData(podName){
     data.forEach( d => this.podData.push(d))
     }
 
-// getPodData(podName){
-//     this.podData = [];
-//     $.ajax({
-//         method: "GET",
-//         url: `/search/podcast/${podName}`,
-//         success: function(data) {
-//             data.forEach( d=> this.podData.push(d))
-//             console.log(data);
-//         }
-//       })
-// }
-
 async getEpisodesData(id){
         let data = await $.get(`/search/episode/${id}`)
         renderer.render2(data)
         console.log(data)
     }
 
-
-
-
-  }
+}
 
 

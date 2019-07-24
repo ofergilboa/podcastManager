@@ -32,7 +32,7 @@ class Renderer {
         const someHTML = template({data:episodeData})
         $('.episodes').append(someHTML)
     }
-
+ 
 
         // renderFavourites(favouritesData){
         //     $('.pods').empty()
