@@ -22,4 +22,6 @@ class audioPlay{
     }
 }
 
+const play = new audioPlay
+play.renderAudioBar()
 // module.exports = audioCreator

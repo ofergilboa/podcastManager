@@ -33,28 +33,31 @@
         <div class="episodes"></div>
 
         <script id="audio-template" type="text/x-handlebars-template">
-            <div id="podcast">
-                <div id="bar"></div>
-                <div id="audio">
-                    <source src="{{audio}}" >
-                    <div id = "progress" class = "text, bar" ></div>
-                    <div id = "playBar">
-                        <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
-                        <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
-                        <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
-                        <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
-                        <span id = "duration" class = "text, bar">{{duration}}00:00</span>
-                        <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
-                        <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
-                    </div>            
-            </script>
+        <div id="podcast">
+            <div id="bar"></div>
+            <div id="audio">
+                <source src="{{audio}}" >
+                <div id = "progress" class = "text, bar" ></div>
+                <div id = "playBar">
+                    <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
+                    <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                    <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
+                    <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
+                    <span id = "duration" class = "text, bar">{{duration}}00:00</span>
+                    <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
+                    <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
+                </div>            
+        </script>
+    </header>
 
+<main>
+        <div class="episodes"></div>
         <!-- handlebars episodes -->
 
         <script id="episodes-template" type="text/x-handlebars-template">
                     <div class="epData" >
                     {{#each_upto data 1}}
-                    <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
+                    <img class="epImg" src="{{image}}" alt="" >
                     </div>
                 {{/each_upto}}
         
@@ -74,7 +77,7 @@
 
         <script id="pod-template" type="text/x-handlebars-template">
                 {{#each data}}
-                <div class="podData">
+                <div class="podData pods2">
                     <img class="img" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
                 </div>
                 {{/each}}
@@ -94,38 +97,47 @@
 
         <script id="genres-results-template" type="text/x-handlebars-template">
                 {{#each data}}
-                <div class="podData">
+                <div class="podData pods2">
                     <img class="img-genre-result" src="{{image}}" data-id="{{id}}" data-title="{{title}}">
                 </div>
                 {{/each}}
             </script>
 
-        </main>
+    </main>
 
-        <footer>
-            <div id="userBar">
-                <span class="footer homeBar" id="home"><i class="Medium material-icons">home</i></span>
-                <span class="footer homeBar favourites" id="home" class="homeBar"><i
-                        class="Medium material-icons">star</i></span>
-                <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text"
-                        autofocus placeholder="Find a podcast"></span>
-                <button class="footer  getPods"><i class="bttn material-icons">search</i></button>
-                </span>
-            </div>
-        </footer>
+    <footer>
+        <div id="userBar">
+            <span class="footer homeBar" id="home"><i class="Medium material-icons">home</i></span>
+            <span class="footer homeBar"><i class="Medium material-icons">person</i></span>
+            <!-- <span class="footer homeBar favourites"><i class="Medium material-icons">person</i></span> -->
+            <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text" autofocus placeholder="Find a podcast"></span>
+            <button class="footer  getPods"><i class="bttn material-icons">search</i></button>
+            <!-- <nav>
+                <div class="nav-wrapper">
+                  <form>
+                    <div class="getPods input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="bttn material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </form>
+                </div>
+              </nav> -->
+            </span>
+        </div>
+    </footer>
 
 
-        <!-- <script src="../server/model/sortedGenres.js"></script> -->
-        <script src="handlebars/dist/handlebars.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="jquery/dist/jquery.js"></script>
-        <script src="podManager.js"></script>
-        <script src="audioPlay.js"></script>
-        <script src="player.js"></script>
-        <script src="sortedGenres.js"></script>
-        <script src="renderer.js"></script>
-        <!-- <script src="logic.js"></script> -->
-        <script src="main.js"></script>
+    <!-- <script src="../server/model/sortedGenres.js"></script> -->
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="podManager.js"></script>
+    <script src="audioPlay.js"></script>
+    <script src="sortedGenres.js"></script>
+    <script src="renderer.js"></script>
+    <!-- <script src="logic.js"></script> -->
+    <script src="main.js"></script>
 </body>
 
 </html>
