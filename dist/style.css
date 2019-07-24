@@ -81,7 +81,6 @@ main {
   color: whitesmoke;
   flex-shrink: 1;
   height: 5vh;
-  cursor: pointer
 }
 .favourites {
   display: inline-block;
@@ -137,6 +136,20 @@ main {
 }
 .episode-title {
   font-weight: bolder;
+}
+div#player {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  padding: 15px;
+}
+input[type="image"],
+img#vol_img {
+  width: 20px;
+  height: 20px;
+}
+span.value {
+  display: none;
 }
 /* img.img {
  width: calc(15px + 3vw);

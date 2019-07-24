@@ -54,6 +54,10 @@ $('.episode-title').on('click', function(){
     alert('hi!')
 })
 
+$('.episodes').on('click','#play',function(){
+    alert('yes')
+})
+
 
 Handlebars.registerHelper('each_upto', function(ary, max, options) {
     if(!ary || ary.length == 0)
