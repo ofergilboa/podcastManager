@@ -1,10 +1,10 @@
 const renderer = new Renderer()
 const podManager = new PodManager()
 
-// let loadPage = async function() {
-//     await podManager.getFavourites()
-//     renderer.renderFavourites(podManager.favouritesData)
-// }
+let loadPage = async function() {
+    await podManager.getGenres(genres)
+    renderer.renderMain(podManager.favouritesData)
+}
 
 
 const getPods = async function () {

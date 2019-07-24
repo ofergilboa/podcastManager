@@ -10,6 +10,9 @@
     <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css“>
 </head>
 <body>
+
+
+
     <!-- materialize -->
 
     <!-- <a class="waves-effect waves-light btn">button</a>
@@ -50,10 +53,11 @@
 
         <div class="main"></div>
                 <!-- handlebars homePage -->
-        <script id="homePage-template" type="text/x-handlebars-template">
+        <script id="main-template" type="text/x-handlebars-template">
                 {{#each this}}
             <div class="genres">
                     <img class="genreImg" src="{{image}}" data-id="{{id}}">
+                    
             </div>
                 {{/each}}
         </script>
@@ -65,7 +69,7 @@
                 {{#each data}}
                 <div class="podData">
                     <!-- <div class="title"> {{title_original}}</div> -->
-                    <img class="img" src="{{image}}" data-id="{{id}}">
+                    <img class="img" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
                     <!-- <div class="description">{{description_original}}</div> -->
                 </div>
                 {{/each}}
