@@ -17,6 +17,7 @@ const getPods = async function () {
     // console.log(podManager.podData)
 }
 
+
 $('.pods').on('click','.img-genre', async function () {
     let genreId = $(this).data('id')
     let data = await $.get(`/search/bestGenres/${genreId}`)
@@ -34,6 +35,7 @@ $('.pods').on('click', '.img-genre-result', function () {
     let id = $(this).data('id')
     podManager.getEpisodesData(id)
 })
+
 
 
 $('#home').on('click', function () {
