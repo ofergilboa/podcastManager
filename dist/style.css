@@ -80,6 +80,34 @@ main {
   color: #7a7a7a;
   flex-shrink: 1;
 }
+
+.podInput {
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(61, 61, 61, 0.329);
+  outline: none !important;
+  flex-grow: 2;
+  border: none;
+  font-size: 3vh;
+  color: white;
+  border-bottom: none !important;
+}
+.podInput:focus {
+  border-bottom: none !important;
+}
+/* .bttn{
+    align-self: flex-end;
+    width: 10vh;
+    height: 100%;
+ } */
+#mediaPlayer {
+  position: fixed;
+  top: 6vh;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
 .pods {
   margin-left: 3vw;
   margin-right: 2vw;
@@ -89,6 +117,7 @@ main {
 .pods2 {
   margin-top: 5px;
   margin-bottom: 14px;
+
 }
 .podData {
   display: inline-block;
@@ -130,6 +159,19 @@ img#vol_img {
 }
 span.value {
   display: none;
+}
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin: 0;
+}
+div#title {
+  height: 40px;
+  width: 100%;
+  background-color: darkslategray;
+  position: fixed;
+  top: 0;
 }
 /* img.img {
  width: calc(15px + 3vw);

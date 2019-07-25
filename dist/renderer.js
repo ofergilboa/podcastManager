@@ -57,6 +57,14 @@ class Renderer {
         $('.pods').append(someHTML)
     }
 
+    renderPlayer(audio){
+        $('.player').empty()
+        const source = $('#player-template').html()
+        const template = Handlebars.compile(source)
+        const someHTML = template(audio)
+        $('.player').append(someHTML)
+    }
+
  
         // renderFavourites(favouritesData){
         //     $('.pods').empty()
