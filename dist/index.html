@@ -9,7 +9,8 @@
     <script src="https://kit.fontawesome.com/b9b250eb6d.js"></script>
     <title>PodManager</title>
     <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css“>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,20 +18,26 @@
 
 
     <header>
-        <!-- <div id="wrapper">
-            <div id='player'>
-                <audio id="music_player">
-                    <source src="Burst.mp3" />
-                </audio>
-                <input type="image" src="play-button.png" onclick="play_aud()" id="play_button">
-                <input type="image" src="music-player-pause-lines.png" onclick="pause_aud()" id="play_button">
-                <input type="image" src="video-player-stop-button.png" onclick="stop_aud()" id="play_button">
-                <img src="speaker-filled-audio-tool.png" id="vol_img">
-                <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
-            </div>
-        </div> -->
-
+        <div id="title"><h1>POD-MAN</h1></div>
+        <div class="player"></div>
         <div class="episodes"></div>
+        
+        <script id="player-template" type="text/x-handlebars-template">
+            <div id="wrapper">
+                <div id='player'>
+                    <audio id="music_player">
+                    <source src="{{audio}}" />
+                    </audio>
+                    <input type="image" src="play-button.png" onclick="play_aud()" id="play_button">
+                    <input type="image" src="music-player-pause-lines.png" onclick="pause_aud()" id="pause_button">
+                    <input type="image" src="video-player-stop-button.png" onclick="stop_aud()" id="stop_button">
+                    <img src="speaker-filled-audio-tool.png" id="vol_img">
+                    <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+                </div>
+            </div>
+            
+        </script>
+
 
         <script id="audio-template" type="text/x-handlebars-template">
             <div id="podcast">
@@ -63,7 +70,7 @@
                     <div class="title">
                     <div class="episode-title">{{title}}</div>
                     </div>
-                        <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                        <span id = "play" class ="bar" data-id="{{id}}"><i class="Medium material-icons">play_circle_filled</i></span>
                     </div>
                     {{/each}}
         </script>
@@ -83,6 +90,7 @@
         <!-- handlebars  genres -->
 
         <script id="genres-template" type="text/x-handlebars-template">
+                <h1>choose a genre:</h1>
                 {{#each data}}
                 <div class="podData">
                     <img class="img-genre" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">

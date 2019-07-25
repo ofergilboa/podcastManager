@@ -88,5 +88,18 @@ router.post('/podcast',function(req,res){
 })
 
 //**********************************************************
+//    Search episode by ID
+//**********************************************************
+router.get('/episode/:id', async function(req,res){
+    let id = req.params.id;
+    let data = []
+    const response = await unirest.get(`https://listen-api.listennotes.com/api/v2/episodes/${id}`)
+    .header('X-ListenAPI-Key', `${apiKey}`)
+    response.toJSON();
+    res.send(response.body)
+})
+
+
+//**********************************************************
 
 module.exports = router
