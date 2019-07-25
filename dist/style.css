@@ -83,7 +83,7 @@ main {
 .pods {
   margin-left: 3vw;
   margin-right: 2vw;
-  margin-top: 70px;
+  margin-top: 40px;
   margin-bottom: 52px;
 }
 .pods2 {
@@ -104,9 +104,12 @@ main {
   max-height: 100%;
   border-radius: 10%;
 }
+:active .podData {
+  border-radius: 50%;
+}
 .epImg {
   border-radius: 10%;
-  margin-top: 65px;
+  margin-top: 45px;
   margin-left: 38px;
   margin-bottom: 15px;
 }
@@ -140,3 +143,9 @@ span.value {
     width: 300px;
     height: 300px;
  } */
+.epData {
+  display: inline-block;
+}
+#save {
+  margin-right: 10px;
+}

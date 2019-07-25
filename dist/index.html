@@ -30,29 +30,29 @@
             </div>
         </div> -->
 
-        <div class="episodes"></div>
-
+        
         <script id="audio-template" type="text/x-handlebars-template">
         <div id="podcast">
             <div id="bar"></div>
             <div id="audio">
                 <source src="{{audio}}" >
-                <div id = "progress" class = "text, bar" ></div>
-                <div id = "playBar">
-                    <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
-                    <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
-                    <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
-                    <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
-                    <span id = "duration" class = "text, bar">{{duration}}00:00</span>
-                    <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
-                    <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
-                </div>            
-        </script>
-    </header>
-
+                    <div id = "progress" class = "text, bar" ></div>
+                    <div id = "playBar">
+                        <span id = "replay" class = "bar"><i class="Medium material-icons">replay_10</i></span>
+                        <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
+                        <span id = "forward" class ="bar"><i class="Medium material-icons">forward_10</i></span>
+                        <span id = "currentTime" class = "text, bar">{{currentTime}}00:00 /</span>
+                        <span id = "duration" class = "text, bar">{{duration}}00:00</span>
+                        <span id = "save" class ="bar"><i class="Medium material-icons">star_border</i></span>
+                        <span id = "info" class ="bar"><i class="Medium material-icons">info_outline</i></span>  
+                    </div>            
+                </script>
+</header>
+            
 <main>
-        <div class="episodes"></div>
-        <!-- handlebars episodes -->
+                
+                <div class="episodes"></div>
+                <!-- handlebars episodes -->
 
         <script id="episodes-template" type="text/x-handlebars-template">
                     <div class="epData" >
@@ -63,11 +63,10 @@
         
                 {{#each data}}
                 <div class="epData">
-                    <div class="title">
+                    <div id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></div>
                     <div class="episode-title">{{title}}</div>
-                    </div>
-                        <span id = "play" class ="bar"><i class="Medium material-icons">play_circle_filled</i></span>
-                    </div>
+                    <div id = "save" class ="bar"><i class="Medium material-icons">add_circle</i></div>
+                </div>
                     {{/each}}
         </script>
 
@@ -134,6 +133,7 @@
     <script src="jquery/dist/jquery.js"></script>
     <script src="podManager.js"></script>
     <script src="audioPlay.js"></script>
+    <script src="player.js"></script>
     <script src="sortedGenres.js"></script>
     <script src="renderer.js"></script>
     <!-- <script src="logic.js"></script> -->
