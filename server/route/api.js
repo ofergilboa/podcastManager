@@ -11,7 +11,7 @@ const Podcast = model.Podcast
 
 
 //**********************************************************
-//    Search for episodes of a specific pod cast
+//    Search for episodes of a specific podcast
 //**********************************************************
 
 

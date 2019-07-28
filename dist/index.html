@@ -18,7 +18,10 @@
 
 
     <header>
-        <div id="title"><h1>POD-MAN</h1></div>
+        <div id="title">
+            <span id="home"><i class="Medium material-icons">home</i></span>
+            <h1>POD-MAN</h1>
+        </div>
         <div class="player"></div>
         <div class="episodes"></div>
         
@@ -63,14 +66,15 @@
                     {{#each_upto data 1}}
                     <img class="epImg" src="{{image}}" alt="" style="margin-left: 3.5vh";">
                     </div>
+                    <div><h2>episodes:</h2></div>
                 {{/each_upto}}
         
                 {{#each data}}
                 <div class="epData">
                     <div class="title">
-                    <div class="episode-title">{{title}}</div>
+                    <div class="episode-title" data-id="{{id}}">{{title}}</div>
                     </div>
-                        <span id = "play" class ="bar" data-id="{{id}}"><i class="Medium material-icons">play_circle_filled</i></span>
+                        
                     </div>
                     {{/each}}
         </script>
@@ -90,7 +94,7 @@
         <!-- handlebars  genres -->
 
         <script id="genres-template" type="text/x-handlebars-template">
-                <h1>choose a genre:</h1>
+                <h2>choose a genre:</h2>
                 {{#each data}}
                 <div class="podData">
                     <img class="img-genre" src="{{image}}" data-id="{{id}}" data-title="{{title_original}}">
@@ -112,13 +116,8 @@
 
         <footer>
             <div id="userBar">
-                <span class="footer homeBar" id="home"><i class="Medium material-icons">home</i></span>
-                <span class="footer homeBar favourites" id="home" class="homeBar"><i
-                        class="Medium material-icons">star</i></span>
-                <span class="footer podInput podInput inputBttn" id="input"><input id="podcastInput" type="text"
-                        autofocus placeholder="Find a podcast"></span>
-                <button class="footer  getPods"><i class="bttn material-icons">search</i></button>
-                </span>
+                <input id="podcastInput" type="text" autofocus placeholder=" Find a podcast">
+                <i class="bttn Medium material-icons">search</i>
             </div>
         </footer>
 

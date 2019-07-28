@@ -39,7 +39,7 @@ body {
 }
 footer {
   z-index: 9;
-  background-color: #e2e2e2;
+  background-color: darkslategray;
   color: #6b6969;
   display: flex;
   margin-left: -8px;
@@ -114,12 +114,18 @@ main {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+.pods {
+  margin-top: 45px;
+  margin-bottom: 60px;
+  margin-left: 15px;
+}
 .podData {
   display: inline-block;
   width: 40%;
   height: 40%;
   margin-left: 2vh;
   margin-right: 2vh;
+  margin-bottom: 15px;
 }
 .img,
 .img-genre,
@@ -127,12 +133,27 @@ main {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10%;
+  box-shadow: 0px 0px 20px 5px lightgray;
+}
+.img-genre {
+  box-shadow: 0px 0px 20px 5px lightgray;
 }
 .epImg {
+  position: relative;
   border-radius: 10%;
+  box-shadow: 0px 0px 20px 5px lightgray;
+  left: 7px;
+  margin-bottom: 20px;
 }
 .episode-title {
-  font-weight: bolder;
+  font-weight: 500;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  border-top: 0.5px solid grey;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px 1px lightgray;
 }
 div#player {
   display: grid;
@@ -153,6 +174,14 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   color: white;
   margin: 0;
+  letter-spacing: 3px;
+}
+h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: darkgray;
+  margin: 10px;
+  font-weight: 100;
 }
 div#title {
   height: 40px;
@@ -160,6 +189,41 @@ div#title {
   background-color: darkslategray;
   position: fixed;
   top: 0;
+  z-index: 999;
+}
+#home > i {
+  position: fixed;
+  top: 7px;
+  left: 5px;
+  color: lightgray;
+}
+div.player {
+  position: fixed;
+  bottom: 0px;
+  display: inline-block;
+  height: 50px;
+  background-color: darkslategray;
+  z-index: 999;
+}
+div.episodes {
+  margin-top: 60px;
+}
+.bttn.material-icons {
+  font-size: 35px;
+}
+#podcastInput {
+  position: relative;
+  left: 30px;
+  height: 20px;
+  border-radius: 5px;
+  width: 75vw;
+  background-color: #f5f5f5;
+}
+img:hover {
+  cursor: pointer;
+}
+.episode-title:hover {
+  background-color: #ebebeb;
 }
 /* img.img {
  width: calc(15px + 3vw);

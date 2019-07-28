@@ -3,6 +3,10 @@ const podManager = new PodManager()
 const srtGenres = new SortedGenres()
 const createAudio = new audioPlay()
 
+$(document).ready(function(){
+    $(this).scrollTop(0);
+})
+
 let loadPage = function () {
     renderer.renderGenres(srtGenres.genres)
 }
@@ -30,19 +34,23 @@ $('.pods').on('click', '.img', function () {
     renderer.render2(podManager.getEpisodesData(podID))
 })
 
+//*******render episodes*********//
+
 $('.pods').on('click', '.img-genre-result', function () {
     let id = $(this).data('id')
     podManager.getEpisodesData(id)
+    $(window).scrollTop(0)
 })
 
 
-$('#home').on('click', function () {
+$('.Medium').on('click', function () {
     renderer.renderGenres(srtGenres.genres)
+    $('.player').empty()
 })
 
 $('.favourites').on('click', function () {
     // renderer.renderFavourites(podManager.())
-    alert('clicking favs')
+    // alert('clicking favs')
 })
 
 $('.bttn').on('click', function () {
@@ -51,12 +59,12 @@ $('.bttn').on('click', function () {
 })
 
 $('.episode-title').on('click', function () {
-    alert('hi!')
+    // alert('hi!')
 })
 
 //********************************************8 */
 
-$('.episodes').on('click', '#play', async function () {
+$('.episodes').on('click', '.episode-title', async function () {
     let id = $(this).data('id')
     let result = await $.get(`/episode/${id}`)
     renderer.renderPlayer(result)
@@ -67,7 +75,6 @@ $('.episodes').on('click', '#play', async function () {
     function startplayer() {
         player = document.getElementById('music_player');
         player.controls = false;
-        alert('yes')
     }
     $('#play_button').on('click',function(){
         player.play()
